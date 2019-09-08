@@ -162,6 +162,7 @@ On some large workflows Cromwell runs out of memory when requesting the meta-dat
 ```
 curl -X GET "http://0.0.0.0/api/workflows/v1/{WORKFLOW_ID}/metadata?expandSubWorkflows=false&includeKey=callCaching" -H  "accept: application/json" --socks5 localhost:5000 > meta.json
 ```
+---
 
 ## Mounting with external disk _(Optional)_
 
