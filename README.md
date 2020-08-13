@@ -5,14 +5,14 @@ Notes for setting up a cromwell server for google cloud
 ## Installing Cromwell server to Google Cloud
  - Create a Google VM (Ubuntu) for running the cromwell server
 
-(create_vm.png)
+![alt tag](https://github.com/atgu/cromwell_google_setup/blob/master/example_snapshots/create_vm.png)
 ### Architecture requirements 
  - 1 CPU seems to work fine, but we need ~7-8G of memory. `n1-standard-2` is ok, but `n1-standard-1` is not due to too little memory (job dispatch will fail for larger submissions).
  - **REMEMBER TO GIVE SUFFICIENT API ACCESS SCOPE: "Allow full access to all Cloud APIs"**
  - Change `Boot disk` to OS of choice (tutorial using Ubuntu 18.04). Size depends on use, but 100 Gb suffices for managing many jobs. Running out of space will cause problems.
  - _Optional: Can attach separate disk to VM instance to hold the data_
 
-(vm_cpu_type.png)
+![alt tag](https://github.com/atgu/cromwell_google_setup/blob/master/example_snapshots/vm_cpu_type2.png)
 
 ## Set up Cromwell on VM
 0. Log in to VM: `gcloud compute ssh [instancename] --zone [selectedzone]`
